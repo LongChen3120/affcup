@@ -1,0 +1,1648 @@
+[
+    {
+        "url":"https://www.google.com/", 
+        "sport":"Bóng đá",
+        "topic":"FIFA WORLD CUP QATAR 2022",
+        "end_league": true,
+        "step_crawl":["send_request", "send_key", "click_search", "click_match", "crawl_thong_ke", "click_doi_hinh", "crawl_doi_hinh", 
+                            "click_timelines", "crawl_timelines"],
+        "step_crawl_loop":["click_thong_ke", "crawl_thong_ke", "click_doi_hinh", "crawl_doi_hinh", 
+                            "click_timelines", "crawl_timelines"],
+        "send_request":{
+            "type_crawl":2,
+            "url":"https://www.google.com/"
+        },
+        "send_key":{
+            "type_action":4,
+            "xpath":"//*[@class = 'gLFyf']"
+        },
+        "click_search":{
+            "type_action":6,
+            "xpath":"//*[@class = 'gLFyf']"
+        },
+        "click_match":{
+            "type_action":1,
+            "xpath":"//tr/td[contains(@class, 'imso-hov')][1] | //div[contains(@class, 'imso-hov')][@data-lp]"
+        },
+        "click_thong_ke":{
+            "type_action":1,
+            "xpath":"//*[@class= 'PPjCfd tb_noscroll tb_tc']/*[@class = 'imso-hide-overflow tb_l GSkImd'][2]",
+            "time_sleep":3
+        },
+        "crawl_thong_ke":{
+            "type_action":5,
+            "data":{
+                "round":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'JNVNDd imso-fpm']//*[@class = 'imso_mh_s__lg-st-srs']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":2,
+                    "type_output":4,
+                    "re":"^[^·]*"
+                },
+                "group":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_mh_s__lg-st-srs']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":2,
+                    "type_output":4,
+                    "re":"·(.+)"
+                },
+                "venue":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imspo_mff__mff-fv imso-loa']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                },
+                "status":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_mh__tm-scr imso_mh__mh-bd']//*[@class = 'imso_mh__ft-mtch imso-medium-font imso_mh__ft-mtchc']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                },
+                "detail_team_0":{
+                    "name":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__first')]//*[contains(@class, 'team-name')]/span",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "ensign":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__first')]//*[@class = 'imso_btl__mh-logo']",
+                        "browser_result":1,
+                        "attribute":"src",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "bàn thắng":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_mh__l-tm-sc imso_mh__scr-it imso-light-font']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pen":{
+                        "type_action":2,
+                        "xpath":"//*[contains(@class, 'imso_mh_s__pen-scr-it')][1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "scorer":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_gs__tgs imso_gs__left-team']//span[@class = 'imso_gs__g-a-t']",
+                            "browser_result":3,
+                            "data":{
+
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":"./ancestor::*[@class = 'imso_gs__gs-r']/span",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "time":{
+                                    "type_action":2,
+                                    "xpath":"./span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^']*"
+                                },
+                                "type":{
+                                    "type_action":2,
+                                    "xpath":"./span/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                }
+                            }
+                    },
+                    "shots":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][1]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "shot_on_target":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][2]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "possession":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][3]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "passes":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][4]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pass_accuracy":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][5]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "Fouls":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][6]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_yellow_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][7]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_red_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][8]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "offsides":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][9]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "corners":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][10]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    }
+                },
+
+                "detail_team_1":{
+                    "name":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__second')]//*[contains(@class, 'team-name')]/span",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "ensign":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__second')]//*[@class = 'imso_btl__mh-logo']",
+                        "browser_result":1,
+                        "attribute":"src",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "bàn thắng":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_mh__r-tm-sc imso_mh__scr-it imso-light-font']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pen":{
+                        "type_action":2,
+                        "xpath":"//*[contains(@class, 'imso_mh_s__pen-scr-it')][3]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "scorer":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_gs__tgs imso_gs__right-team']//span[@class = 'imso_gs__g-a-t']",
+                            "browser_result":3,
+                            "data":{
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":"./ancestor::*[@class = 'imso_gs__gs-r']/span",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "time":{
+                                    "type_action":2,
+                                    "xpath":"./span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^']*"
+                                },
+                                "type":{
+                                    "type_action":2,
+                                    "xpath":"./span/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":2,
+                                    "type_find":1,
+                                    "type_output":4
+                                }
+                            }
+                        },
+                    "shots":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][1]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "shot_on_target":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][2]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "possession":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][3]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "passes":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][4]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pass_accuracy":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][5]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "Fouls":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][6]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_yellow_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][7]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_red_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][8]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "offsides":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][9]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "corners":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][10]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    }
+                }
+            },
+            "time_sleep":5
+        },
+        "click_doi_hinh":{
+            "type_action":1,
+            "xpath":"//*[@class= 'PPjCfd tb_noscroll tb_tc']/*[@class = 'imso-hide-overflow tb_l GSkImd'][2]",
+            "time_sleep":3
+        },
+        "crawl_doi_hinh":{
+            "type_action":5,
+            "data":{
+                "doi_hinh_team_0":{
+                    "position":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-vl-hf lrvl-btrc']/*[@class = 'lrvl-tvc lrvl-f']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "đội hình":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lrvl-tlt lrvl-tl lrvl-btrc']/*[@class = 'lr-vl-ls']//*[@class = 'lrvl-pd']",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'lrvl-pnc']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'ov5Fzd']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "Substitutes":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lr-imso-ls-ems']//tr",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./td[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":"./td[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "coach":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-imso-m-lm imso-loa']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    }
+                    
+                },
+                "doi_hinh_team_1":{
+                    "position":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-vl-hf lrvl-bbrc']/*[@class = 'lrvl-tvc lrvl-f']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "đội hình":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lrvl-tlt lrvl-tl lrvl-bbrc']/*[@class = 'lr-vl-ls']//*[@class = 'lrvl-pd']",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'lrvl-pnc']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'ov5Fzd']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "Substitutes":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lr-imso-ls-ems']//tr",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./td[4]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":"./td[5]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "coach":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-imso-m-rm imso-loa']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    }
+                }
+            }
+        },
+        "click_timelines":{
+            "type_action":1,
+            "xpath":"//*[@class= 'PPjCfd tb_noscroll tb_tc']/*[@class = 'imso-hide-overflow tb_l GSkImd'][1]",
+            "time_sleep":3
+        },
+        "crawl_timelines":{
+            "type_action":5,
+            "data":{
+                "card":{
+                    "type_action":2,
+                    "xpath":"//*[contains(text(), 'THẺ')]/ancestor::*[@class = 'imso_gf__gf-itm']",
+                    "browser_result":3,
+                    "data":{
+                        "type_card":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-ttl']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":1,
+                            "type_output":4
+                        },
+                        "time":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-sub']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^']*"
+                        },
+                        "player":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__pl-nm imso-hide-overflow imso-loa'][1]",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":1,
+                            "type_output":4
+                        },
+                        "numb":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":5,
+                            "re":"(\\d+)"
+                        },
+                        "team":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^·]*"
+                        }
+                    }
+                },
+                "substitution":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_gf__sub-in']//ancestor::*[@class = 'imso_gf__bg-on']",
+                    "browser_result":3,
+                    "data":{
+                        "time":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-sub']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^']*"
+                        },
+                        "in":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__sub-in']/following-sibling::*",
+                            "browser_result":3,
+                            "data":{
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-nm imso-hide-overflow imso-loa'][1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":5,
+                                    "re":"(\\d+)"
+                                },
+                                "team":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^·]*"
+                                }
+                            }
+                        },
+                        "out":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__sub-out']/following-sibling::*",
+                            "browser_result":3,
+                            "data":{
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-nm imso-hide-overflow imso-loa'][1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":5,
+                                    "re":"(\\d+)"
+                                },
+                                "team":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^·]*"
+                                }
+                            }
+                        }
+                    }
+                },
+                "dien_bien_tran_dau":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_gf__nofold' or @class = 'imso_gf__gh']",
+                    "browser_result":3,
+                    "data":{
+                        "time":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-sub' or @class = 'MmmFqe']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^']*"
+                        },
+                        "event":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-ttl' or @class = 'dgDgVc']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":1,
+                            "type_output":4,
+                            "replace":[
+                                {
+                                    "old_val":"VÀOOOOO!!!",
+                                    "new_val":"Goal"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "dien_bien_pen":{
+                    "type_action":2,
+                    "xpath":"//table[@class = 'imso_gf__so-tbl']//tr[position()>1]",
+                    "browser_result":3,
+                    "data":{
+                        "team_0":{
+                            "type_action":2,
+                            "xpath":"./td[1]",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./div[1]",
+                                    "attribute":"text",
+                                    "browser_result":1,
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "goal":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":7,
+                                    "true":"Vào",
+                                    "false":"Không vào"
+                                },
+                                "score":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":3,
+                                    "re":"(\\d+)",
+                                    "position":0
+                                }
+                            }
+                        },
+                        "team_1":{
+                            "type_action":2,
+                            "xpath":"./td[4]",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./div[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "goal":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":7,
+                                    "true":"Vào",
+                                    "false":"Không vào"
+                                },
+                                "score":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":3,
+                                    "re":"(\\d+)",
+                                    "position":1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "url":"https://www.google.com/", 
+        "sport":"Bóng đá",
+        "topic":"AFF CUP 2022",
+        "end_league":false,
+        "step_crawl":["send_request", "send_key", "click_search", "click_match", "crawl_thong_ke", "click_doi_hinh", "crawl_doi_hinh", 
+                            "click_timelines", "crawl_timelines"],
+        "step_crawl_loop":["click_thong_ke", "crawl_thong_ke", "click_doi_hinh", "crawl_doi_hinh", 
+                            "click_timelines", "crawl_timelines"],
+        "send_request":{
+            "type_crawl":2,
+            "url":"https://www.google.com/"
+        },
+        "send_key":{
+            "type_action":4,
+            "xpath":"//*[@class = 'gLFyf']"
+        },
+        "click_search":{
+            "type_action":6,
+            "xpath":"//*[@class = 'gLFyf']"
+        },
+        "click_match":{
+            "type_action":1,
+            "xpath":"//tr/td[contains(@class, 'imso-hov')][1] | //div[contains(@class, 'imso-hov')][@data-lp]"
+        },
+        "click_thong_ke":{
+            "type_action":1,
+            "xpath":"//*[@class= 'PPjCfd tb_noscroll tb_tc']/*[@class = 'imso-hide-overflow tb_l GSkImd'][2]",
+            "time_sleep":3
+        },
+        "crawl_thong_ke":{
+            "type_action":5,
+            "data":{
+                "round":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'JNVNDd imso-fpm']//*[@class = 'imso_mh_s__lg-st-srs']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":2,
+                    "type_output":4,
+                    "re":"^[^·]*"
+                },
+                "group":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_mh_s__lg-st-srs']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":2,
+                    "type_output":4,
+                    "re":"·(.+)"
+                },
+                "venue":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imspo_mff__mff-fv imso-loa']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                },
+                "status":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_mh__ft-mtch imso-medium-font imso_mh__ft-mtchc']",
+                    "browser_result":1,
+                    "attribute":"text",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                },
+                "detail_team_0":{
+                    "name":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__first')]//*[contains(@class, 'team-name')]/span",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "ensign":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__first')]//*[@class = 'imso_btl__mh-logo']",
+                        "browser_result":1,
+                        "attribute":"src",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "bàn thắng":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_mh__l-tm-sc imso_mh__scr-it imso-light-font']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pen":{
+                        "type_action":2,
+                        "xpath":"//*[contains(@class, 'imso_mh_s__pen-scr-it')][1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "scorer":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_gs__tgs imso_gs__left-team']//span[@class = 'imso_gs__g-a-t']",
+                            "browser_result":3,
+                            "data":{
+
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":"./ancestor::*[@class = 'imso_gs__gs-r']/span",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "time":{
+                                    "type_action":2,
+                                    "xpath":"./span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^']*"
+                                },
+                                "type":{
+                                    "type_action":2,
+                                    "xpath":"./span/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                }
+                            }
+                    },
+                    "shots":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][1]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "shot_on_target":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][2]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "possession":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][3]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "passes":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][4]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pass_accuracy":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][5]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "Fouls":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][6]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_yellow_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][7]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_red_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][8]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "offsides":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][9]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "corners":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][10]/td[1]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    }
+                },
+
+                "detail_team_1":{
+                    "name":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__second')]//*[contains(@class, 'team-name')]/span",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "ensign":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[contains(@class, 'imso_mh__second')]//*[@class = 'imso_btl__mh-logo']",
+                        "browser_result":1,
+                        "attribute":"src",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "bàn thắng":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_mh__r-tm-sc imso_mh__scr-it imso-light-font']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pen":{
+                        "type_action":2,
+                        "xpath":"//*[contains(@class, 'imso_mh_s__pen-scr-it')][3]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "scorer":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'imso_mh__mh-ed']//*[@class = 'imso_gs__tgs imso_gs__right-team']//span[@class = 'imso_gs__g-a-t']",
+                            "browser_result":3,
+                            "data":{
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":"./ancestor::*[@class = 'imso_gs__gs-r']/span",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "time":{
+                                    "type_action":2,
+                                    "xpath":"./span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^']*"
+                                },
+                                "type":{
+                                    "type_action":2,
+                                    "xpath":"./span/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":2,
+                                    "type_find":1,
+                                    "type_output":4
+                                }
+                            }
+                        },
+                    "shots":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][1]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "shot_on_target":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][2]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "possession":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][3]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "passes":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][4]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "pass_accuracy":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][5]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "Fouls":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][6]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_yellow_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][7]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "numb_red_cards":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][8]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "offsides":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][9]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "corners":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'MzWkAb'][10]/td[2]",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    }
+                }
+            },
+            "time_sleep":5
+        },
+        "click_doi_hinh":{
+            "type_action":1,
+            "xpath":"//*[@class= 'PPjCfd tb_noscroll tb_tc']/*[@class = 'imso-hide-overflow tb_l GSkImd'][2]",
+            "time_sleep":3
+        },
+        "crawl_doi_hinh":{
+            "type_action":5,
+            "data":{
+                "doi_hinh_team_0":{
+                    "position":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-vl-hf lrvl-btrc']/*[@class = 'lrvl-tvc lrvl-f']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "đội hình":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lrvl-tlt lrvl-tl lrvl-btrc']/*[@class = 'lr-vl-ls']//*[@class = 'lrvl-pd']",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'lrvl-pnc']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'ov5Fzd']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "Substitutes":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lr-imso-ls-ems']//tr",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./td[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":"./td[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "coach":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-imso-m-lm imso-loa']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    }
+                    
+                },
+                "doi_hinh_team_1":{
+                    "position":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-vl-hf lrvl-bbrc']/*[@class = 'lrvl-tvc lrvl-f']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "đội hình":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lrvl-tlt lrvl-tl lrvl-bbrc']/*[@class = 'lr-vl-ls']//*[@class = 'lrvl-pd']",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'lrvl-pnc']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//span[@class = 'ov5Fzd']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "Substitutes":{
+                            "type_action":2,
+                            "xpath":"//*[@class = 'lr-imso-ls-ems']//tr",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./td[4]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":"./td[5]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":5
+                                }
+                            }
+                        },
+                    "coach":{
+                        "type_action":2,
+                        "xpath":"//*[@class = 'lr-imso-m-rm imso-loa']",
+                        "browser_result":1,
+                        "attribute":"text",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    }
+                }
+            }
+        },
+        "click_timelines":{
+            "type_action":1,
+            "xpath":"//*[@class= 'PPjCfd tb_noscroll tb_tc']/*[@class = 'imso-hide-overflow tb_l GSkImd'][1]",
+            "time_sleep":3
+        },
+        "crawl_timelines":{
+            "type_action":5,
+            "data":{
+                "card":{
+                    "type_action":2,
+                    "xpath":"//*[contains(text(), 'THẺ')]/ancestor::*[@class = 'imso_gf__gf-itm']",
+                    "browser_result":3,
+                    "data":{
+                        "type_card":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-ttl']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":1,
+                            "type_output":4
+                        },
+                        "time":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-sub']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^']*"
+                        },
+                        "player":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__pl-nm imso-hide-overflow imso-loa'][1]",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":1,
+                            "type_output":4
+                        },
+                        "numb":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":5,
+                            "re":"(\\d+)"
+                        },
+                        "team":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^·]*"
+                        }
+                    }
+                },
+                "substitution":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_gf__sub-in']//ancestor::*[@class = 'imso_gf__bg-on']",
+                    "browser_result":3,
+                    "data":{
+                        "time":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-sub']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^']*"
+                        },
+                        "in":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__sub-in']/following-sibling::*",
+                            "browser_result":3,
+                            "data":{
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-nm imso-hide-overflow imso-loa'][1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":5,
+                                    "re":"(\\d+)"
+                                },
+                                "team":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^·]*"
+                                }
+                            }
+                        },
+                        "out":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__sub-out']/following-sibling::*",
+                            "browser_result":3,
+                            "data":{
+                                "name":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-nm imso-hide-overflow imso-loa'][1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "numb":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":5,
+                                    "re":"(\\d+)"
+                                },
+                                "team":{
+                                    "type_action":2,
+                                    "xpath":".//*[@class = 'imso_gf__pl-info imso-hide-overflow imso-loa']",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^[^·]*"
+                                }
+                            }
+                        }
+                    }
+                },
+                "dien_bien_tran_dau":{
+                    "type_action":2,
+                    "xpath":"//*[@class = 'imso_gf__nofold' or @class = 'imso_gf__gh']",
+                    "browser_result":3,
+                    "data":{
+                        "time":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-sub' or @class = 'MmmFqe']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":2,
+                            "type_output":4,
+                            "re":"^[^']*"
+                        },
+                        "event":{
+                            "type_action":2,
+                            "xpath":".//*[@class = 'imso_gf__fh-ttl' or @class = 'dgDgVc']",
+                            "browser_result":1,
+                            "attribute":"text",
+                            "type_result":4,
+                            "type_find":1,
+                            "type_output":4,
+                            "replace":[
+                                {
+                                    "old_val":"VÀOOOOO!!!",
+                                    "new_val":"Goal"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "dien_bien_pen":{
+                    "type_action":2,
+                    "xpath":"//table[@class = 'imso_gf__so-tbl']//tr[position()>1]",
+                    "browser_result":3,
+                    "data":{
+                        "team_0":{
+                            "type_action":2,
+                            "xpath":"./td[1]",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./div[1]",
+                                    "attribute":"text",
+                                    "browser_result":1,
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "goal":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":7,
+                                    "true":"Vào",
+                                    "false":"Không vào"
+                                },
+                                "score":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":3,
+                                    "re":"(\\d+)",
+                                    "position":0
+                                }
+                            }
+                        },
+                        "team_1":{
+                            "type_action":2,
+                            "xpath":"./td[4]",
+                            "browser_result":3,
+                            "data":{
+                                "player":{
+                                    "type_action":2,
+                                    "xpath":"./div[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "goal":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[1]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":1,
+                                    "type_output":7,
+                                    "true":"Vào",
+                                    "false":"Không vào"
+                                },
+                                "score":{
+                                    "type_action":2,
+                                    "xpath":"./div[2]/span[2]",
+                                    "browser_result":1,
+                                    "attribute":"text",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":3,
+                                    "re":"(\\d+)",
+                                    "position":1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,38 @@
+2022-12-22 17:55:49 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-22T17:26:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '1645af523f04b4b93a18bc620ccfd0c9', 'team_1': 'Philippines', 'team_2': '', 'team_0': 'Campuchia'}]}}
+2022-12-22 17:55:49 - INFO - next run at: 2022-12-22 17:56:00
+2022-12-22 17:55:49 - INFO - add job ok, list jobs:
+[<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
+2022-12-22 17:56:00 - INFO - check_time: 2022-12-23 17:56:00+07:00,
+list match:['42799471485df38292f2cd2dd1955556', 
+'dd3f9930c652ae079c17476d54ba1490', 
+'22ff359e602b65b652fd5d8bc28a0791', 
+'d84e933cf5b07c7aa6f12be616cfe220', 
+'1b78d641486648020db711abf57096c8']
+2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-23T16:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '42799471485df38292f2cd2dd1955556', 'team_1': 'Indonesia', 'team_2': '', 'team_0': 'Campuchia'}]}}
+2022-12-22 17:56:00 - INFO - next run at: 2022-12-23 16:35:00
+2022-12-22 17:56:00 - INFO - add job ok, list jobs:
+[<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, 
+<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
+2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-23T16:30:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': 'dd3f9930c652ae079c17476d54ba1490', 'team_1': 'Philippines', 'team_2': '', 'team_0': 'Brunei'}]}}
+2022-12-22 17:56:00 - INFO - next run at: 2022-12-23 17:05:00
+2022-12-22 17:56:00 - INFO - add job ok, list jobs:
+[<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, 
+<Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, 
+<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
+2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-24T16:30:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '22ff359e602b65b652fd5d8bc28a0791', 'team_1': 'Singapore', 'team_2': '', 'team_0': 'Myanmar'}]}}
+2022-12-22 17:56:00 - INFO - next run at: 2022-12-24 17:05:00
+2022-12-22 17:56:00 - INFO - add job ok, list jobs:
+[<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, <Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, <Job (id=be64b98a9e6a495d8e25404cd8b80eb8 name=job: 22ff359e602b65b652fd5d8bc28a0791)>, <Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
+2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-24T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': 'd84e933cf5b07c7aa6f12be616cfe220', 'team_1': 'Malaysia', 'team_2': '', 'team_0': 'Lào'}]}}
+2022-12-22 17:56:00 - INFO - next run at: 2022-12-24 19:35:00
+2022-12-22 17:56:00 - INFO - add job ok, list jobs:
+[<Job (id=10ede0adc1ca46e08a105e11ad4ed34e name=job: d84e933cf5b07c7aa6f12be616cfe220)>, <Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, <Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, <Job (id=be64b98a9e6a495d8e25404cd8b80eb8 name=job: 22ff359e602b65b652fd5d8bc28a0791)>, <Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
+2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-26T16:30:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '1b78d641486648020db711abf57096c8', 'team_1': 'Brunei', 'team_2': '', 'team_0': 'Indonesia'}]}}
+2022-12-22 17:56:00 - INFO - next run at: 2022-12-26 17:05:00
+2022-12-22 17:56:00 - INFO - add job ok, list jobs:
+[<Job (id=10ede0adc1ca46e08a105e11ad4ed34e name=job: d84e933cf5b07c7aa6f12be616cfe220)>, 
+<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, 
+<Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, 
+<Job (id=38c9bda3354048b894e5288aee3885d2 name=job: 1b78d641486648020db711abf57096c8)>, 
+<Job (id=be64b98a9e6a495d8e25404cd8b80eb8 name=job: 22ff359e602b65b652fd5d8bc28a0791)>, 
+<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]

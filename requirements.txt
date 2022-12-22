@@ -1,0 +1,11 @@
+python-dateutil
+requests
+bs4
+lxml
+selenium
+pymongo
+elasticsearch<7.14.0
+apscheduler
+fastapi
+uvicorn
+psutil
