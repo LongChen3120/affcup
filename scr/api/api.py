@@ -1,7 +1,11 @@
+import sys
+sys.path.insert(0, '..\\affcup\\scr')
+# print(sys.path)
+
 
 import uvicorn
 
-from ..src import db_handler
+import db_handler
 
 from fastapi import FastAPI
 
@@ -117,7 +121,8 @@ def check_data(payload:dict = None):
 
 
 if __name__ == "__main__":
-    uvicorn.run("api:app", host="192.168.19.163", port=8000, reload=True)
+    uvicorn.run("api.api:app", host="192.168.19.163", port=8000, reload=True)
     
 
-
+# import os
+# print(os.listdir())
