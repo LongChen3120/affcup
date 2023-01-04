@@ -13,11 +13,12 @@ HOST_ES = "http://192.168.19.77:9200/"
 INDEX_ES = "lich_affcup"
 PATH_DB_MONGO_LOCAL = "mongodb://localhost:27017"
 PATH_DB_MONGO_A_HUY = "mongodb://192.168.19.168:27017"
-PATH_LOG_1 = "./docs/log_main/main.log"
-PATH_LOG_2 = "./docs/log_ram/ram.log"
-PATH_CHROME_DRIVER = "./chrome_driver/chromedriver.exe"
-PATH_CONFIG = "./scr/config/config.json"
-PATH_CONFIG_DETAIL = "./scr/config/config_detail.json"
+PATH_LOG_1 = "../docs/log_main/main.log"
+PATH_LOG_2 = "../docs/log_ram/ram.log"
+PATH_LOG_3 = "../docs/log_ram/api.log"
+PATH_CHROME_DRIVER = "../chrome_driver/chromedriver.exe"
+PATH_CONFIG = "../scr/config/config.json"
+PATH_CONFIG_DETAIL = "../scr/config/config_detail.json"
 API_SCHEDULE_CRAWL = "http://192.168.19.168:5005/schedule_crawl"
 
 
@@ -27,6 +28,8 @@ NAME_LOG_1 = "main"
 TYPE_LOG_1 = 1
 NAME_LOG_2 = "log_mem"
 TYPE_LOG_2 = 2
+NAME_LOG_3 = "log_api"
+TYPE_LOG_3 = 3
 HEADER = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
 TIMEOUT = 10
 TIME_RUN_SCHEDULE = 1
@@ -43,8 +46,8 @@ PAYLOAD_SCHEDULE_CRAWL = {
         "schedule_data":[
             {
                 "schedule_id": "",
-                "team_1": "",
-                "team_2": ""
+                "team_0": "",
+                "team_1": ""
             }
         ] 
     }

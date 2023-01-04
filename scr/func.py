@@ -14,7 +14,7 @@ def set_log(logger_name, log_file):
     rootlogger.setLevel(logging.INFO)
     timed_rotating = TimedRotatingFileHandler(log_file,
                                        when="h",
-                                       interval=1,
+                                       interval=24,
                                        backupCount=5,
                                        encoding='utf-8'
                                        )
