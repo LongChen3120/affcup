@@ -67,10 +67,15 @@ def add_job(id_match, time_run):
     log_main.info(f"next run at: {time_run}")
     trigger = CronTrigger(year=time_run.year, month=time_run.month, day=time_run.day, hour=time_run.hour, minute=time_run.minute, second=time_run.second)
     scheduler.add_job(crawl_handler, trigger=trigger, args=[id_match], max_instances=10, name=f"job: {id_match}")
+<<<<<<< HEAD
     log_main.info("list jobs:")
     for job in scheduler.get_jobs():
         log_main.info(job)
     # log_main.info(f"add job ok, list jobs:\n{scheduler.get_jobs()}")
+=======
+    for job in scheduler.get_jobs():
+        log_main.info(f"job:{job}")
+>>>>>>> cb87db2e5525bba1c09023fdd3a74cfbef360846
 
 
 def scheduler_run(list_match):
@@ -79,7 +84,11 @@ def scheduler_run(list_match):
     scheduler.start()
     for match in list_match:
         time_start = func.convet_time_start(match['_source']['time'])
+<<<<<<< HEAD
         # call_api_set_lich_tuong_thuat(time_start, match)
+=======
+        call_api_set_lich_tuong_thuat(time_start, match)
+>>>>>>> cb87db2e5525bba1c09023fdd3a74cfbef360846
         time_run = func.get_time_run(time_start, 5)
         add_job(match['_id'], time_run)
     

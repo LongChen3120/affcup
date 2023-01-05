@@ -48,7 +48,7 @@ def crawl_loop(browser, match, config):
 
 def detect_step(step, browser, config, match):
     if step == "send_key":
-        key = match['detail_team_0']['name'] + " vs " + match['detail_team_1']['name']
+        key = match['detail_team_0']['name'] + " vs " + match['detail_team_1']['name'] + " " + match['topic']
         log_main.info("send_key")
         func_detect.detect_type_action(browser, config['send_key'], key)
     elif step == "click_search":
@@ -92,6 +92,7 @@ def format_data(match, data, config):
             match['detail_team_1'].update(data['doi_hinh_team_0'])
     except:
         pass
+    match['last_update'] = datetime.datetime.now()
     return match
     
 
