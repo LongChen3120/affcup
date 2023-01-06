@@ -25,7 +25,7 @@ def parse_config_browser(old_object, object, data, browser):
             if result is not None:
                 data[key] = result
             else:
-                data[key] = ""
+                data[key] = None
         elif isinstance(vals, list):
             data[key] = []
             for obj in vals:
@@ -55,7 +55,7 @@ def parse_config_html(old_object, object, data, browser):
             if result is not None:
                 data[key] = result
             else:
-                data[key] = ""
+                data[key] = None
         elif isinstance(vals, list):
             data[key] = []
             for obj in vals:
@@ -83,7 +83,7 @@ def parse_config_json(old_object, object, data, browser):
             if result is not None and result:
                 data[key] = result
             else:
-                data[key] = ""
+                data[key] = None
         elif isinstance(vals, list):
             data[key] = []
             for obj in vals:

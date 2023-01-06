@@ -57,6 +57,7 @@ def string_to_output(obj, config):
     elif config['type_output'] == 6:
         obj = func_detect.detect_type_find(func.remove_space("".join(obj)).strip(), config)
         time = func_detect.detect_time_format(obj, config)
+        return time
     elif config['type_output'] == 7:
         obj = func.remove_space("".join(obj))
         if obj == config['true']:
