@@ -51,6 +51,10 @@ __________________________ config __________________________
 + 0: False
 + 1: True
 
+
+# 2 kiểu tổ chức file config: config dùng cho crawl bằng requests(config.json) và config dùng cho crawl bằng selenium(config_detail.json; có các step để định hình quá trình crawl)
+key "data" để đánh dấu bắt đầu đệ quy đọc phần config bên trong, tên các key con trong key "data" được tái sử dụng làm key cho object output luôn.
+
 __________________________ database __________________________
 ## type:
 + 2: lịch thi đấu
@@ -92,4 +96,5 @@ curl --location --request POST 'http://192.168.19.187:8000/info' \
     "time(trước ngày: yyyy-mm-dd)":"",
     "time(sau ngày: yyyy-mm-dd)":""
 }'
+
 

@@ -5,7 +5,7 @@ import func_request_find
 
 
 def parse_config_browser(old_object, object, data, browser):
-    # hàm đọc cấu trúc config, xuất ra result tương ứng
+    # hàm đệ quy đọc cấu trúc config crawl cho những site dùng selenium, xuất ra result tương ứng
     old_vals = object
     for key, vals in object.items():
         if isinstance(vals, str) or isinstance(vals, int):
@@ -38,7 +38,7 @@ def parse_config_browser(old_object, object, data, browser):
 
 
 def parse_config_html(old_object, object, data, browser):
-     # hàm đọc cấu trúc config, xuất ra result tương ứng
+     # hàm đệ quy đọc cấu trúc config crawl cho những site dùng requests, response là html, xuất ra result tương ứng
     old_vals = object
     for key, vals in object.items():
         if isinstance(vals, str) or isinstance(vals, int):
@@ -68,6 +68,7 @@ def parse_config_html(old_object, object, data, browser):
 
 
 def parse_config_json(old_object, object, data, browser):
+    # hàm đệ quy đọc cấu trúc config crawl cho những site dùng requests, response là json, xuất ra result tương ứng
     old_vals = object
     for key, vals in object.items():
         if isinstance(vals, str) or isinstance(vals, int):
