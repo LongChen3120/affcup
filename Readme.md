@@ -1,9 +1,5 @@
 __________________________ config __________________________
 
-## type sport:
-+ 1: đối kháng: gồm 2 đội, 2 người, 2 team,...; data gồm lịch, bxh
-+ 2: hỗn hợp: nhiều bên tham gia thi đấu; data gồm lịch, kết quả của các bên
-
 ## type crawl:
 + 0: không crawl, lấy luôn thông tin từ config
 + 1: request
@@ -59,6 +55,3 @@ __________________________ database __________________________
 ## type:
 + 2: lịch thi đấu
 + 5: bảng xếp hạng
-+ 7: môn thể thao
-+ 8: giải đấu
-+ 9: kết quả
