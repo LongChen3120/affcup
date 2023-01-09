@@ -63,7 +63,7 @@
                 },
                 "status":{
                     "type_action":2,
-                    "xpath":"//*[@class = 'imso_mh__tm-scr imso_mh__mh-bd']//*[@class = 'imso_mh__ft-mtch imso-medium-font imso_mh__ft-mtchc']",
+                    "xpath":"//*[@class = 'imso_mh__ft-mtch imso-medium-font imso_mh__ft-mtchc']",
                     "browser_result":1,
                     "attribute":"text",
                     "type_result":4,

@@ -1,38 +1,61 @@
-2022-12-22 17:55:49 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-22T17:26:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '1645af523f04b4b93a18bc620ccfd0c9', 'team_1': 'Philippines', 'team_2': '', 'team_0': 'Campuchia'}]}}
-2022-12-22 17:55:49 - INFO - next run at: 2022-12-22 17:56:00
-2022-12-22 17:55:49 - INFO - add job ok, list jobs:
-[<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
-2022-12-22 17:56:00 - INFO - check_time: 2022-12-23 17:56:00+07:00,
-list match:['42799471485df38292f2cd2dd1955556', 
-'dd3f9930c652ae079c17476d54ba1490', 
-'22ff359e602b65b652fd5d8bc28a0791', 
-'d84e933cf5b07c7aa6f12be616cfe220', 
-'1b78d641486648020db711abf57096c8']
-2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-23T16:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '42799471485df38292f2cd2dd1955556', 'team_1': 'Indonesia', 'team_2': '', 'team_0': 'Campuchia'}]}}
-2022-12-22 17:56:00 - INFO - next run at: 2022-12-23 16:35:00
-2022-12-22 17:56:00 - INFO - add job ok, list jobs:
-[<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, 
-<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
-2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-23T16:30:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': 'dd3f9930c652ae079c17476d54ba1490', 'team_1': 'Philippines', 'team_2': '', 'team_0': 'Brunei'}]}}
-2022-12-22 17:56:00 - INFO - next run at: 2022-12-23 17:05:00
-2022-12-22 17:56:00 - INFO - add job ok, list jobs:
-[<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, 
-<Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, 
-<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
-2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-24T16:30:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '22ff359e602b65b652fd5d8bc28a0791', 'team_1': 'Singapore', 'team_2': '', 'team_0': 'Myanmar'}]}}
-2022-12-22 17:56:00 - INFO - next run at: 2022-12-24 17:05:00
-2022-12-22 17:56:00 - INFO - add job ok, list jobs:
-[<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, <Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, <Job (id=be64b98a9e6a495d8e25404cd8b80eb8 name=job: 22ff359e602b65b652fd5d8bc28a0791)>, <Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
-2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-24T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': 'd84e933cf5b07c7aa6f12be616cfe220', 'team_1': 'Malaysia', 'team_2': '', 'team_0': 'Lào'}]}}
-2022-12-22 17:56:00 - INFO - next run at: 2022-12-24 19:35:00
-2022-12-22 17:56:00 - INFO - add job ok, list jobs:
-[<Job (id=10ede0adc1ca46e08a105e11ad4ed34e name=job: d84e933cf5b07c7aa6f12be616cfe220)>, <Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, <Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, <Job (id=be64b98a9e6a495d8e25404cd8b80eb8 name=job: 22ff359e602b65b652fd5d8bc28a0791)>, <Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
-2022-12-22 17:56:00 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2022-12-26T16:30:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '1b78d641486648020db711abf57096c8', 'team_1': 'Brunei', 'team_2': '', 'team_0': 'Indonesia'}]}}
-2022-12-22 17:56:00 - INFO - next run at: 2022-12-26 17:05:00
-2022-12-22 17:56:00 - INFO - add job ok, list jobs:
-[<Job (id=10ede0adc1ca46e08a105e11ad4ed34e name=job: d84e933cf5b07c7aa6f12be616cfe220)>, 
-<Job (id=9f6726b9d91a40319ad0a3b38836f562 name=job: 42799471485df38292f2cd2dd1955556)>, 
-<Job (id=0e3cd8c8aa1e4ce7803e26a6db7e0c7c name=job: dd3f9930c652ae079c17476d54ba1490)>, 
-<Job (id=38c9bda3354048b894e5288aee3885d2 name=job: 1b78d641486648020db711abf57096c8)>, 
-<Job (id=be64b98a9e6a495d8e25404cd8b80eb8 name=job: 22ff359e602b65b652fd5d8bc28a0791)>, 
-<Job (id=24bf522728ae41039e6d36a4b7661c4e name=job: 1645af523f04b4b93a18bc620ccfd0c9)>]
+2023-01-09 10:39:42 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-09T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '8dcbda9e378ab7a4cd2989505bfe4216', 'team_0': 'Indonesia', 'team_1': 'Việt Nam'}]}}
+2023-01-09 10:39:42 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-09T19:00:00.000000,
+2023-01-09 10:39:42 - INFO - next run at: 2023-01-09 19:35:00
+2023-01-09 10:39:42 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-09T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://www.24h.com.vn/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': 'e9ebd9811bf5f39203e8ab9184fd8b45', 'team_0': 'Vietnam', 'team_1': 'Indonesia'}]}}
+2023-01-09 10:39:42 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-09T19:00:00.000000,
+2023-01-09 10:39:42 - INFO - next run at: 2023-01-09 19:35:00
+2023-01-09 10:39:42 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: e9ebd9811bf5f39203e8ab9184fd8b45 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-10T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '876ced5bf47aa799158a8193ecef4cae', 'team_0': 'Malaysia', 'team_1': 'Thái Lan'}]}}
+2023-01-09 10:39:42 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-10T19:00:00.000000,
+2023-01-09 10:39:42 - INFO - next run at: 2023-01-10 19:35:00
+2023-01-09 10:39:42 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: e9ebd9811bf5f39203e8ab9184fd8b45 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: 876ced5bf47aa799158a8193ecef4cae (trigger: cron[year='2023', month='1', day='10', hour='19', minute='35', second='0'], next run at: 2023-01-10 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-10T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://www.24h.com.vn/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '0031707025bbdb1193a7dae34be19906', 'team_0': 'Thailand', 'team_1': 'Malaysia'}]}}
+2023-01-09 10:39:42 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-10T19:00:00.000000,
+2023-01-09 10:39:42 - INFO - next run at: 2023-01-10 19:35:00
+2023-01-09 10:39:42 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: e9ebd9811bf5f39203e8ab9184fd8b45 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: 876ced5bf47aa799158a8193ecef4cae (trigger: cron[year='2023', month='1', day='10', hour='19', minute='35', second='0'], next run at: 2023-01-10 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: 0031707025bbdb1193a7dae34be19906 (trigger: cron[year='2023', month='1', day='10', hour='19', minute='35', second='0'], next run at: 2023-01-10 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-13T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://www.24h.com.vn/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '13c20ebe83d37051dab329f64f735e63', 'team_0': '', 'team_1': ''}]}}
+2023-01-09 10:39:42 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-13T19:00:00.000000,
+2023-01-09 10:39:42 - INFO - next run at: 2023-01-13 19:35:00v
+2023-01-09 10:39:42 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: e9ebd9811bf5f39203e8ab9184fd8b45 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: 876ced5bf47aa799158a8193ecef4cae (trigger: cron[year='2023', month='1', day='10', hour='19', minute='35', second='0'], next run at: 2023-01-10 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: 0031707025bbdb1193a7dae34be19906 (trigger: cron[year='2023', month='1', day='10', hour='19', minute='35', second='0'], next run at: 2023-01-10 19:35:00 +07)
+2023-01-09 10:39:42 - INFO - job:job: 13c20ebe83d37051dab329f64f735e63 (trigger: cron[year='2023', month='1', day='13', hour='19', minute='35', second='0'], next run at: 2023-01-13 19:35:00 +07)
+2023-01-09 10:58:09 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-09T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '8dcbda9e378ab7a4cd2989505bfe4216', 'team_0': 'Indonesia', 'team_1': 'Việt Nam'}]}}
+2023-01-09 10:58:09 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-09T19:00:00.000000,
+2023-01-09 10:58:09 - INFO - next run at: 2023-01-09 19:35:00
+2023-01-09 10:58:09 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:58:09 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-10T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://vnexpress.net/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '876ced5bf47aa799158a8193ecef4cae', 'team_0': 'Malaysia', 'team_1': 'Thái Lan'}]}}
+2023-01-09 10:58:09 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-10T19:00:00.000000,
+2023-01-09 10:58:09 - INFO - next run at: 2023-01-10 19:35:00
+2023-01-09 10:58:09 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:58:09 - INFO - job:job: 876ced5bf47aa799158a8193ecef4cae (trigger: cron[year='2023', month='1', day='10', hour='19', minute='35', second='0'], next run at: 2023-01-10 19:35:00 +07)
+2023-01-09 10:58:09 - INFO - __payload:{'key': 'affcup_live', 'type': 1, 'start_time': '2023-01-13T19:00:00.000000', 'interval': 30, 'auto_controll_interval': 'False', 'site': 'https://www.24h.com.vn/', 'topic': 'AFF Cup Live', 'kwargs': {'schedule_data': [{'schedule_id': '13c20ebe83d37051dab329f64f735e63', 'team_0': '', 'team_1': ''}]}}
+2023-01-09 10:58:09 - WARNING - __response: {"data":"schedule seccessed","status":200}
+
+start run crawl thuong thuat luc:2023-01-13T19:00:00.000000,
+2023-01-09 10:58:09 - INFO - next run at: 2023-01-13 19:35:00
+2023-01-09 10:58:09 - INFO - job:job: 8dcbda9e378ab7a4cd2989505bfe4216 (trigger: cron[year='2023', month='1', day='9', hour='19', minute='35', second='0'], next run at: 2023-01-09 19:35:00 +07)
+2023-01-09 10:58:09 - INFO - job:job: 876ced5bf47aa799158a8193ecef4cae (trigger: cron[year='2023', month='1', day='10', hour='19', minute='35', second='0'], next run at: 2023-01-10 19:35:00 +07)
+2023-01-09 10:58:09 - INFO - job:job: 13c20ebe83d37051dab329f64f735e63 (trigger: cron[year='2023', month='1', day='13', hour='19', minute='35', second='0'], next run at: 2023-01-13 19:35:00 +07)

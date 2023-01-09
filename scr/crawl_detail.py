@@ -150,8 +150,6 @@ def crawl2(id_match):
             except:
                 pass
             if data['status'] == "Kết thúc":
-                log_main.info("end crawl")
-                log_main.info(f"data crawl detail:{data}")
                 break
             else:
                 time.sleep(1 * 60)
@@ -161,7 +159,9 @@ def crawl2(id_match):
     except:
         pass
     finally:
+        log_main.info("end crawl")
+        log_main.info(f"data crawl detail:{data}")
         browser.close()
 
-# crawl("1645af523f04b4b93a18bc620ccfd0c9")
+# crawl("553f278427092d111b903ad3f2e391df")
 # crawl2("4064377f826b3c990b407a8a92cf27c0")
