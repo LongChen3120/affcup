@@ -1,7 +1,6 @@
 __________________________ config __________________________
 
 ## type crawl:
-+ 0: không crawl, lấy luôn thông tin từ config
 + 1: request
 + 2: selenium
 
