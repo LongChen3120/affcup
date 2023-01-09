@@ -31,7 +31,6 @@ def action_scroll_down():
 
 
 def action_send_keys(browser, config, key):
-    # config truyen vao la config doi tuong
     func_request_find.browser_find_xpath(browser, config['xpath']).send_keys(key)
 
 

@@ -55,3 +55,41 @@ __________________________ database __________________________
 ## type:
 + 2: lịch thi đấu
 + 5: bảng xếp hạng
+
+
+
+# INFO
+## thuật toán chính:
++ 1: bắt đầu
++ 2: chạy main_crawl.py
++ 3: quét lịch tiếp theo, thêm vào job store
++ 4: chạy job trong jobs store, mỗi job gồm 2 việc thành phần: cập nhật trận đấu hiện tại và cập nhật lịch mới, bảng xếp hạng mới
++ 5: quay về bước 3
+
+## thuật toán crawl detail:
++ 1: bắt đầu
++ 2: chạy hàm crawl2
++ 3: hàm crawl2 lặp lại crawl chi tiết một trận đấu, thời gian giữa các lần crawl là 1 phút, lặp tối đa 200 lần.
+
+## thuật toán crawl lịch, bảng xếp hạng:
++ 1: bắt đầu
++ 2: lặp qua các config
++ 3: tại mỗi config sẽ check key "end_league"
++ 4: send request 
++ 5: bóc tách
++ 6: lưu
+
+## api:
+curl --location --request POST 'http://192.168.19.187:8000/info' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "topic":"affcup",
+    "type":2,
+    "team_0":"việt nam",
+    "team_1":"lào",
+    "id":"",
+    "time(chính xác: yyyy-mm-dd)":"",
+    "time(trước ngày: yyyy-mm-dd)":"",
+    "time(sau ngày: yyyy-mm-dd)":""
+}'
+

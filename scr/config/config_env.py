@@ -23,6 +23,7 @@ API_SCHEDULE_CRAWL = "http://192.168.19.168:5005/schedule_crawl"
 
 
 # ______VARIABLES_____
+WAIT_RUN = 5
 IMPLICITLY_WAIT = 5
 NAME_LOG_1 = "main"
 TYPE_LOG_1 = 1

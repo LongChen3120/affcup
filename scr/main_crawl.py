@@ -20,6 +20,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 
 def call_api_set_lich_tuong_thuat(time_start, doc):
+    # hàm setup tham số cho payload rồi call tới api của a Huy
     time_start_crawl = func.get_time_run(time_start, -30)
     time_start_crawl = datetime.datetime.strftime(time_start_crawl, "%Y-%m-%dT%H:%M:%S.%f")
     payload = config_env.PAYLOAD_SCHEDULE_CRAWL
@@ -37,7 +38,7 @@ def call_api_set_lich_tuong_thuat(time_start, doc):
 
 
 def crawl_handler(id_match):
-    check_job()
+    # chạy crawl lịch mới và crawl chi tiết trận đấu 
     try:
         crawl_lich_bxh.crawl()
     except:
@@ -60,12 +61,13 @@ def check_job():
         for match in list_match:
             time_start = func.convet_time_start(match['_source']['time'])
             call_api_set_lich_tuong_thuat(time_start, match)
-            time_run = func.get_time_run(time_start, 5)
+            time_run = func.get_time_run(time_start, config_env.WAIT_RUN)
             add_job(match['_id'], time_run)
             list_job = scheduler.get_jobs()
 
 
 def add_job(id_match, time_run):
+    # hàm thêm job mới
     log_main.info(f"next run at: {time_run}")
     trigger = CronTrigger(year=time_run.year, month=time_run.month, day=time_run.day, hour=time_run.hour, minute=time_run.minute, second=time_run.second)
     scheduler.add_job(crawl_handler, trigger=trigger, args=[id_match], max_instances=10, name=f"job: {id_match}")
@@ -74,15 +76,22 @@ def add_job(id_match, time_run):
 
 
 def scheduler_run(list_match):
+    # setup bộ lập lịch
+
     global scheduler
     scheduler = BackgroundScheduler()
     scheduler.start()
+
+    # lên lịch cho mỗi trận đấu
     for match in list_match:
         time_start = func.convet_time_start(match['_source']['time'])
+
+        # gọi hàm call tới api chạy lịch tường thuật của a Huy
         call_api_set_lich_tuong_thuat(time_start, match)
-        time_run = func.get_time_run(time_start, 5)
+        time_run = func.get_time_run(time_start, config_env.WAIT_RUN)
         add_job(match['_id'], time_run)
     
+
     while True:
         try:
             time.sleep(3600)
@@ -93,16 +102,22 @@ def scheduler_run(list_match):
 
 
 if __name__ == '__main__':
+    # setup log, quét lịch thi đấu để lên lịch chạy
+
     func.set_log(config_env.NAME_LOG_1, config_env.PATH_LOG_1)
     func.set_log(config_env.NAME_LOG_2, config_env.PATH_LOG_2)
     log_main = logging.getLogger(config_env.NAME_LOG_1)
     log_ram = logging.getLogger(config_env.NAME_LOG_2)
     log_main.propagate = False
     log_ram.propagate = False
+
+    # update config, kết nối ES
     db_handler.update_config()
     es = db_handler.connect_ES()
     
+    # tìm lịch thi đấu tiếp theo
     list_match = db_handler.find_next_match(es, config_env.INDEX_ES, datetime.datetime.now())
+    
     scheduler_run(list_match)
 
     

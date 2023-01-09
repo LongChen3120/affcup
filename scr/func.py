@@ -35,6 +35,7 @@ def remove_space(string):
 
 
 def get_time_run(time_start, time_match):
+    # hàm xác định thời gian chạy so với thời gian bắt đầu trận đấu
     return (time_start + datetime.timedelta(minutes=time_match))
 
 
